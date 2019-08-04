@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.bxm.vision</groupId>
+	<artifactId>punish-facade</artifactId>
+	<version>1.0.2</version>
+	<packaging>jar</packaging>
+
+	<name>punish-facade</name>
+	<description>punish-facade project for Spring Boot</description>
+
+	<parent>
+		<groupId>com.bxm</groupId>
+		<artifactId>spring-boot-starter-cloud-parent</artifactId>
+		<version>2.0.0</version>
+	</parent>
+
+	<properties>
+		<warcar_version>1.1.7.3</warcar_version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.bxm</groupId>
+			<artifactId>warcar-utils</artifactId>
+			<version>${warcar_version}</version>
+		</dependency>
+	</dependencies>
+</project>

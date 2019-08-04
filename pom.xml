@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<modules>
+		<module>punish-api</module>
+		<module>punish-biz</module>
+		<module>punish-data</module>
+		<module>punish-common</module>
+	</modules>
+
+	<groupId>com.bxm.vision</groupId>
+	<artifactId>vision-punish</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0.1</version>
+
+	<name>vision-punish</name>
+	<description>vision-punish project for Spring Boot</description>
+
+	<parent>
+		<groupId>com.bxm</groupId>
+		<artifactId>spring-boot-starter-cloud-parent</artifactId>
+		<version>2.0.0</version>
+	</parent>
+
+	<properties>
+		<warcar_version>1.1.7.3</warcar_version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.bxm</groupId>
+			<artifactId>warcar-utils</artifactId>
+			<version>${warcar_version}</version>
+		</dependency>
+	</dependencies>
+
+</project>

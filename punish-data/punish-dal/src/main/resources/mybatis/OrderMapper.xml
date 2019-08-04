@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bxm.vision.punish.dal.mapper.OrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bxm.vision.punish.model.dao.Order">
+        <id column="id" property="id" />
+        <result column="order_id" property="orderId" />
+        <result column="uid" property="uid" />
+        <result column="commodity_id" property="commodityId" />
+        <result column="execute_result" property="executeResult" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, order_id, uid, commodity_id, execute_result, create_time
+    </sql>
+
+</mapper>

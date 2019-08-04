@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bxm.vision.punish.dal.mapper.BannedIpLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bxm.vision.punish.model.dao.BannedIpLog">
+        <id column="id" property="id" />
+        <result column="uuid" property="uuid" />
+        <result column="ruler_code" property="rulerCode" />
+        <result column="ips" property="ips" />
+        <result column="execute_result" property="executeResult" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, uuid, ruler_code, ips, execute_result, create_time
+    </sql>
+    <select id="selectRulerNewestBannedLog" resultMap="BaseResultMap">
+        select
+        *
+        from
+        tbl_banned_ip_log
+        where
+        ruler_code = #{rulerCode,jdbcType=VARCHAR}
+        and DATE_FORMAT(create_time,'%y%m%d') = DATE_FORMAT(now(),'%y%m%d')
+        and execute_result = 'SUCCESS'
+    </select>
+
+</mapper>
